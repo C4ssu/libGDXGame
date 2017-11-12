@@ -23,9 +23,9 @@ public class Button2D {
 
     public Texture getTexture(){ return texture; }
 
-    public boolean contains(Vector2 v){
-        return v.x >= pos.x && v.y >= pos.y
-                && v.x <= pos.x+scale.x && v.y <= pos.y+scale.y;
+    public boolean contains(float x, float y){
+        return x >= pos.x && y >= pos.y
+                && x <= pos.x+scale.x && y <= pos.y+scale.y;
     }
 
     public void dispose(){

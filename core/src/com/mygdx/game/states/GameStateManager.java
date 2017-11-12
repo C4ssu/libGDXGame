@@ -10,9 +10,11 @@ import java.util.Stack;
 
 public class GameStateManager {
 
+    public static GameStateManager instance;
+
     private Stack<State> states;
 
-    public GameStateManager() { states = new Stack<State>(); }
+    public GameStateManager() { states = new Stack<State>(); instance = this; }
 
     public void push(State state) { states.push(state); }
 
